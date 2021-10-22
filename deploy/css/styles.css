@@ -365,35 +365,28 @@ ul li {
   list-style: none;
 }
 
-.container-grid {
-  display: grid;
-  grid-template-areas: ". grid-content .";
-  grid-template-columns: 15px auto 15px;
-  height: 100vh;
-}
-@media (min-width: 1200px) {
-  .container-grid {
-    grid-template-columns: auto 1200px auto;
-  }
-}
-.container-grid > div {
-  grid-area: grid-content;
+a {
+  text-decoration: none;
 }
 
 /* =============
     Typography
 ============= */
-h1, h2, h3, h4 {
+body {
+  font-family: "Montserrat", sans-serif;
+}
+body h1,
+body h2,
+body h3,
+body h4 {
   margin: 0;
   padding: 0;
 }
-
-p {
+body p {
   margin: 0;
   padding: 0;
 }
-
-h1 {
+body h1 {
   font-size: 6.25rem;
   color: red;
 }
@@ -422,9 +415,51 @@ textarea {
 /* =============
     Navigation
 ============= */
+nav {
+  height: 100%;
+}
+nav ul {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav ul li {
+  margin-left: 4vw;
+}
+nav ul li a:link,
+nav ul li a:visited {
+  font-family: "Montserrat", sans-serif;
+  color: black;
+  transition: 0.25s;
+  font-size: 1.125rem;
+  font-weight: 300;
+}
+nav ul li a:link:hover, nav ul li a:link:active,
+nav ul li a:visited:hover,
+nav ul li a:visited:active {
+  color: green;
+}
+
 /* =============
     Header
 ============= */
+header {
+  position: fixed;
+  background-color: #fff;
+  width: 100%;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.1));
+  z-index: 100;
+}
+header > div {
+  display: grid;
+  grid-template-columns: 20% auto;
+  padding: 8px 16px;
+}
+header > div aside a {
+  display: inline-block;
+}
+
 /* =============
     Footer
 ============= */
