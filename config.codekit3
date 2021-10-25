@@ -1191,7 +1191,7 @@
         "optionString" : "{'allowParens': true}"
       },
       "no-console" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'allow': ['warn', 'error']}"
       },
       "no-const-assign" : {
@@ -1583,7 +1583,7 @@
         "active" : 1
       },
       "no-unused-vars" : {
-        "active" : 1,
+        "active" : 0,
         "optionString" : "{'vars': 'all', 'args': 'after-used', 'caughtErrors': 'none', 'ignoreRestSiblings': false}"
       },
       "no-use-before-define" : {
