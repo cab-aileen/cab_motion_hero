@@ -386,10 +386,6 @@ body p {
   margin: 0;
   padding: 0;
 }
-body h1 {
-  font-size: 6.25rem;
-  color: red;
-}
 
 /* =============
     Buttons
@@ -463,3 +459,72 @@ header > div aside a {
 /* =============
     Footer
 ============= */
+#hero {
+  height: 90vh;
+  width: 100%;
+}
+@media (min-width: 1440px) {
+  #hero {
+    display: grid;
+    grid-template-areas: ". hero .";
+    grid-template-columns: auto 1440px auto;
+  }
+}
+#hero > div {
+  overflow: hidden;
+  height: 100%;
+}
+@media (min-width: 1440px) {
+  #hero > div {
+    grid-area: hero;
+  }
+}
+#hero > div article {
+  align-items: center;
+  background-image: url("../img/hero/hero image.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+}
+#hero > div article #hero-content {
+  color: #de8879;
+  text-align: center;
+}
+#hero > div article #hero-content h1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 117px;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.2);
+}
+@media (min-width: 768px) {
+  #hero > div article #hero-content h1 {
+    font-size: 5.625rem;
+  }
+}
+@media (min-width: 1024px) {
+  #hero > div article #hero-content h1 {
+    font-size: 6.25rem;
+  }
+}
+#hero > div article #hero-content h2 {
+  font-size: 1.875rem;
+  font-weight: 400;
+  line-height: 47px;
+  margin-top: -25px;
+  text-shadow: 0px 4px 2px rgba(0, 0, 0, 0.25);
+}
+@media (min-width: 768px) {
+  #hero > div article #hero-content h2 {
+    font-size: 2.5rem;
+    margin-top: -20px;
+  }
+}
+@media (min-width: 1024px) {
+  #hero > div article #hero-content h2 {
+    font-size: 3.125rem;
+    margin-top: -15px;
+  }
+}
