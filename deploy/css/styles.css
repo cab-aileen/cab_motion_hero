@@ -528,3 +528,43 @@ header > div aside a {
     margin-top: -15px;
   }
 }
+
+#content {
+  display: grid;
+  grid-template-columns: auto 90% auto;
+  grid-template-areas: ". content .";
+  padding: 64px 0;
+}
+@media (min-width: 768px) {
+  #content {
+    padding: 100px 0;
+    grid-template-columns: auto 80% auto;
+  }
+}
+@media (min-width: 1024px) {
+  #content {
+    padding: 128px 0;
+  }
+}
+@media (min-width: 1440px) {
+  #content {
+    grid-template-columns: auto 1440px auto;
+  }
+}
+#content > div {
+  grid-area: content;
+}
+@media (min-width: 1024px) {
+  #content > div {
+    padding: 0 30%;
+  }
+}
+#content > div h1 {
+  font-size: 2.1875rem;
+  margin-bottom: 10px;
+}
+#content > div p {
+  font-size: 1.125rem;
+  line-height: 1.875rem;
+  text-align: justify;
+}
