@@ -353,7 +353,11 @@ template {
     Base
 ============= */
 .gs-dev-tools {
-  z-index: 15000;
+  z-index: 2000;
+}
+
+.hide {
+  display: none;
 }
 
 figure {

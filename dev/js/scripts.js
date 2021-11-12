@@ -1,27 +1,18 @@
 import { gsap } from "gsap";
 import { GSDevTools } from "gsap/GSDevTools";
+import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
+import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
+import { Flip } from "gsap/Flip";
+import { MotionPathHelper } from "gsap/MotionPathHelper";
+import { MotionPathPlugin } from "gsap/MotionPathPlugin";
+gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin);
 
-gsap.registerPlugin(GSDevTools);
 
-const mainTL = gsap.timeline();
-
-function frontshoe(){
-    const tl = gsap.timeline();
-
-    tl.to("#front",{duration:1, y:"-=-850"})
-    return tl;
+function shoesdropping(){
+    
+    const mainTL = gsap.timeline();
+    mainTL.to("#shoes-2",{duration:1,scale:3,y:"-=600"});
 }
-
-function backshoe(){
-    const tl =gsap.timeline();
-    tl.to("#back", {duration:1, y:"-=-850"})
-}
-
-mainTL.add(frontshoe())
-        .add(backshoe());
-
-
-
 
 
 
@@ -64,6 +55,13 @@ mainTL.add(frontshoe())
 
 
 GSDevTools.create();
+MorphSVGPlugin.create();
+DrawSVGPlugin.create();
+Flip.create();
+MotionPathHelper.create();
+MotionPathPlugin.create();
+
+
 
 //const heroHeight = document.querySelector("#hero");
 
