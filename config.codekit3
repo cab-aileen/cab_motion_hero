@@ -136,6 +136,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/design\/preloaderaddedlinewolf.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/preloaderaddedlinewolf.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/preloaderaddedtwolines.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -171,6 +181,16 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/design\/preloadereditedline.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/preloaderFIXEDWOLF.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/preloaderFIXEDWOLF.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,

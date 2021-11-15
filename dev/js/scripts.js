@@ -8,6 +8,12 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin);
 
 const mainTL = gsap.timeline();
+
+gsap.set("#vector-31,#vector-310,#vector-311,#vector-29,#vector-30", {stroke:"green", strokeWidth:4});
+//gsap.set("#vector-310")
+//gsap.set("#vector-311")
+//gsap.set("#vector-7")
+//gsap.set("#vector-30")
 const state = Flip.getState("#boots-8, #boots-9");
 
 function shoesdroppingwiththud(){
@@ -40,7 +46,7 @@ function linesplitbetweenboots(){ //scaleX:100
     .from("#rightline-1",{duration:1.2,drawSVG:0,ease:"none"})
     .to("#leftline-1",{duration:1.5,x:"-=1000"},"sametime")
     .to("#rightline-1",{duration:1.5,x:"-=-1000"},"sametime")
-    tl.to("#left-boot",{duration:1.5,x:"-=1000"},"sametime")
+    .to("#left-boot",{duration:1.5,x:"-=1000"},"sametime")
     .to("#right-boot",{duration:1.5,x:"-=-1000"},"sametime")
 
     return tl;
@@ -49,7 +55,22 @@ function linesplitbetweenboots(){ //scaleX:100
 function drawwolf(){
     const tl =gsap.timeline();
     tl.from("#line-4",{drawSVG:0})
-    .from("#")
+        .from("#vector-8",{drawSVG:0})
+        .from("#vector-56",{drawSVG:0})
+        .from("#vector-82",{drawSVG:0})
+        .from("#vector-5",{drawSVG:0})
+        .from("#vector-51",{drawSVG:0})
+        .from("#vector-41",{drawSVG:0})
+        .from("#vector-55",{drawSVG:0})
+        .from("#vector-47",{drawSVG:0})
+        .from("#vector-7",{drawSVG:0})
+
+        .from("#vector-31",{drawSVG:0, fill:"white"},"sametime")
+        .from("#vector-310",{drawSVG:0,fill:"white" },"sametime")
+        .from("#vector-311",{drawSVG:0, fill:"white"},"sametime")
+        .from("#vector-29",{drawSVG:0, fill:"white"},"sametime")
+        .from("#vector-30",{drawSVG:0,fill:"white"},"sametime")
+        
 
     return tl;
 }
