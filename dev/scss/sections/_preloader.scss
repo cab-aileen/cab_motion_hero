@@ -4,3 +4,14 @@
   width: 100%;
   z-index: 1000;
 }
+
+#boots9.active {
+  display: block;
+}
+#boots8.active {
+  visibility: hidden;
+}
+#boots9,
+#boots8.flipping {
+  visibility: visible;
+}
