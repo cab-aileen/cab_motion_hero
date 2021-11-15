@@ -5,15 +5,14 @@ import { DrawSVGPlugin } from "gsap/DrawSVGPlugin";
 import { Flip } from "gsap/Flip";
 import { MotionPathHelper } from "gsap/MotionPathHelper";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
-gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin);
+import { CustomEase } from "gsap/CustomEase";
+
+gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase);
 
 const mainTL = gsap.timeline();
+CustomEase.create("myEase","M0,0 C0.084,0.61 0.416,1.084 0.482,1.138 0.558,1.2 0.812,0.422 1,0 ")
 
-gsap.set("#vector-31,#vector-310,#vector-311,#vector-29,#vector-30", {stroke:"green", strokeWidth:4});
-//gsap.set("#vector-310")
-//gsap.set("#vector-311")
-//gsap.set("#vector-7")
-//gsap.set("#vector-30")
+gsap.set("#vector-31,#vector-310,#vector-311,#vector-29,#vector-30", {stroke:"black", strokeWidth:2});
 const state = Flip.getState("#boots-8, #boots-9");
 
 function shoesdroppingwiththud(){
@@ -56,27 +55,29 @@ function drawwolf(){
     const tl =gsap.timeline();
     tl.from("#line-4",{drawSVG:0})
         .from("#vector-8",{drawSVG:0})
-        .from("#vector-56",{drawSVG:0})
+        .from("#vector-56",{drawSVG:0},"-=0.5")
         .from("#vector-82",{drawSVG:0})
-        .from("#vector-5",{drawSVG:0})
+        .from("#vector-5",{drawSVG:0},"-=0.5")
         .from("#vector-51",{drawSVG:0})
         .from("#vector-41",{drawSVG:0})
-        .from("#vector-55",{drawSVG:0})
+        .from("#vector-55",{drawSVG:0},"-=0.5")
         .from("#vector-47",{drawSVG:0})
-        .from("#vector-7",{drawSVG:0})
+        .from("#vector-7",{drawSVG:0},"-=0.5")
 
         .from("#vector-31",{drawSVG:0, fill:"white"},"sametime")
         .from("#vector-310",{drawSVG:0,fill:"white" },"sametime")
         .from("#vector-311",{drawSVG:0, fill:"white"},"sametime")
         .from("#vector-29",{drawSVG:0, fill:"white"},"sametime")
         .from("#vector-30",{drawSVG:0,fill:"white"},"sametime")
-        
+        .from("#vector-46",{drawSVG:0,fill:"white"},"sametime")
 
     return tl;
 }
 
 function spikesrotating(){
     const tl =gsap.timeline();
+    tl.to("#spikes",{duration:3, scale:5, rotation:"360",transformOrigin:'center',ease: "myEase"})
+    //.reverse("#spikes",{duration:2});
 
     return tl;
 }
