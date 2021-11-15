@@ -9,6 +9,8 @@ import { CustomEase } from "gsap/CustomEase";
 
 gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase);
 
+gsap.set("#front-3", {transformOrigin:"right bottom"});
+gsap.set("#thud-illustration", {transformOrigin:"center"});
 const mainTL = gsap.timeline();
 CustomEase.create("myEase","M0,0 C0.084,0.61 0.416,1.084 0.482,1.138 0.558,1.2 0.812,0.422 1,0 ")
 
@@ -25,8 +27,8 @@ function shoesdroppingwiththud(){
     //tl.from("#shoes-3",{duration:1,y:"-=1300", ease:"none"})
     tl.from("#front-3",{duration: 1, y:"-=1300", ease: "bounce.out", stagger:0.25, alpha:0})
     //.from("#thud-illustration", { },"-=50%")
-    .from("#thud-illustration", {alpha:0, duration:.02},"-=.2")
-    //.to("#front-3",{rotation:-28, y:"-=-212"});
+    .from("#thud-illustration", {alpha:0, duration:.02, scale:0},"-=.2")
+    .to("#front-3",{rotation:-28});
 
     ///Flip.from(state,{toggleClass:"flipping",ease: "power1.inOut"})
 
