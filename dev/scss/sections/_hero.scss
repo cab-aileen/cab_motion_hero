@@ -6,6 +6,7 @@
     display: grid;
     grid-template-areas: ". hero .";
     grid-template-columns: auto 1440px auto;
+    padding-top: 105px;
   }
 
   > div {

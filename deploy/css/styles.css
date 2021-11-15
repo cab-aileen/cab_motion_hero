@@ -474,17 +474,24 @@ header > div aside a {
   z-index: 1000;
 }
 
+#front-3.active {
+  visibility: hidden;
+}
+
+.front-3.flipping {
+  visibility: hidden;
+}
+
+#front-4.active {
+  display: block;
+}
+
 #boots9.active {
   display: block;
 }
 
 #boots8.active {
   visibility: hidden;
-}
-
-#boots9,
-#boots8.flipping {
-  visibility: visible;
 }
 
 #hero {
@@ -496,6 +503,7 @@ header > div aside a {
     display: grid;
     grid-template-areas: ". hero .";
     grid-template-columns: auto 1440px auto;
+    padding-top: 105px;
   }
 }
 #hero > div {
