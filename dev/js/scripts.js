@@ -38,20 +38,18 @@ function linesplitbetweenboots(){ //scaleX:100
     const tl =gsap.timeline();
     tl.from("#leftline-1",{duration:1.2,drawSVG:0,ease:"none"})
     .from("#rightline-1",{duration:1.2,drawSVG:0,ease:"none"})
-    .to("#leftline-1",{duration:2,x:"-=1300"},"sametime")
-    .to("#rightline-1",{duration:2,x:"-=-1300"},"sametime")
+    .to("#leftline-1",{duration:1.5,x:"-=1000"},"sametime")
+    .to("#rightline-1",{duration:1.5,x:"-=-1000"},"sametime")
+    tl.to("#left-boot",{duration:1.5,x:"-=1000"},"sametime")
+    .to("#right-boot",{duration:1.5,x:"-=-1000"},"sametime")
 
     return tl;
 }
 
-function bootssplitinhalf(){
-    const tl=gsap.timeline();
-
-    tl.to
-}
-
 function drawwolf(){
     const tl =gsap.timeline();
+    tl.from("#line-4",{drawSVG:0})
+    .from("#")
 
     return tl;
 }
@@ -72,7 +70,6 @@ function toplinewolfcut(){
 mainTL.add(shoesdroppingwiththud())
         .add(bootsrotatingwithsquishandthud())
         .add(linesplitbetweenboots())
-        .add(bootssplitinhalf())
         .add(drawwolf())
         .add(spikesrotating())
         .add(toplinewolfcut());

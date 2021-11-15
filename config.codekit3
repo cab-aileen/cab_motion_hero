@@ -86,6 +86,16 @@
       "sC" : 3,
       "tS" : 0
     },
+    "\/design\/line4.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/line4.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/preloader_extra.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -136,6 +146,16 @@
       "plM" : 52780316221407,
       "prP" : 0
     },
+    "\/design\/preloaderaddsplitofboots.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/preloaderaddsplitofboots.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/design\/preloaderchangeofboots.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -151,6 +171,36 @@
       "miP" : 0,
       "oA" : 2,
       "oAP" : "\/design\/preloadereditedline.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/preloadersplitofboots.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/preloadersplitofboots.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/preloaderUPDATED.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/preloaderUPDATED.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/design\/preloaderWOLF.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 2,
+      "oAP" : "\/design\/preloaderWOLF.svg",
       "oF" : 0,
       "opt" : 0,
       "plM" : 52780316221407,
