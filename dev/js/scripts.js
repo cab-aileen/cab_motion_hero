@@ -115,7 +115,8 @@ console.log(heroHeight.clientWidth + "px is the width of the hero section");
 mainTL.from("#hero >div article",{duration:1, alpha:0, y:-heroHeight.clientHeight})
     .from("#hero h1",{duration:0.5, alpha:0, y:"+=200", rotation:360}, "madeUp")
     .from("#hero h2",{duration:1, alpha:0, y:"+=200"}, "madeUp")
-    .from("#hero aside",{duration:1, alpha:0, scale:4});
+    .from("#hero aside",{duration:.5, alpha:0, scale:4})
+    .from("#header div",{duration:1, alpha:0, scale:4},"-=4")
 
     return tl;
 }
