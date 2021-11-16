@@ -9,28 +9,29 @@ import { CustomEase } from "gsap/CustomEase";
 
 gsap.registerPlugin(GSDevTools, MorphSVGPlugin, DrawSVGPlugin, Flip, MotionPathHelper, MotionPathPlugin,CustomEase);
 
-gsap.set("#front-3", {transformOrigin:"right bottom"});
-gsap.set("#thud-illustration", {transformOrigin:"center"});
+gsap.set("#front-3, #back-5", {transformOrigin:"right bottom"});
+gsap.set("#thud-illustration,#thud-illustration-2,#thud-illustration-3, #thud-illustration-5", {transformOrigin:"center"});
+gsap.set("#left-boot,#right-boot", {transformOrigin:"center"});
+
+
 const mainTL = gsap.timeline();
 CustomEase.create("myEase","M0,0 C0.084,0.61 0.416,1.084 0.482,1.138 0.558,1.2 0.812,0.422 1,0 ")
 
 gsap.set("#vector-31,#vector-310,#vector-311,#vector-29,#vector-30", {stroke:"black", strokeWidth:2});
-//const state = Flip.getState("#boots-8, #boots-9");
 
-//const front3 = document.querySelector("#front-3");
-//const front4 = document.querySelector("#front-4");
-
-///const state= Flip.getState("#front-4, #front-3");
 
 function shoesdroppingwiththud(){
     const tl =gsap.timeline();
-    //tl.from("#shoes-3",{duration:1,y:"-=1300", ease:"none"})
-    tl.from("#front-3",{duration: 1, y:"-=1300", ease: "bounce.out", stagger:0.25, alpha:0})
-    //.from("#thud-illustration", { },"-=50%")
-    .from("#thud-illustration", {alpha:0, duration:.02, scale:0},"-=.2")
-    .to("#front-3",{rotation:-28});
-
-    ///Flip.from(state,{toggleClass:"flipping",ease: "power1.inOut"})
+    tl.from("#front-3",{duration: 1, y:"-=1300", ease: "bounce.out", stagger:0.25})
+    .from("#thud-illustration", {alpha:0, duration:.2, scale:0},"-=.4","sametime")
+    .to("#thud-illustration", {duration:.2,autoAlpha:0},"sametime")
+    .to("#front-3",{rotation:-29})
+    .from("#back-5",{duration: 1, y:"-=1300", ease: "bounce.out", stagger:0.25},"-=.9" )
+    .from("#thud-illustration-3",{alpha:0, duration:.2, scale:0},"-=.3")
+    .to("#thud-illustration-3", {duration:.2,autoAlpha:0})
+    .from("#thud-illustration-2", {alpha:0, duration:.2, scale:0},"-=.4")
+    .to("#thud-illustration-2", {duration:.2,autoAlpha:0})
+    .to("#back-5",{rotation:-29},"-=.3")
 
     return tl;
 }
@@ -38,9 +39,11 @@ function shoesdroppingwiththud(){
 function bootsrotatingwithsquishandthud(){
     const tl =gsap.timeline();
 
-    //Flip.to(state, {duration: 1,fade: true,ease: "power1.inOut",absolute: true});
-
-    
+    tl.from("#left-boot",{duration:.7,scale:0, rotation:360},"sametime")
+        .from("#right-boot",{duration:.7,scale:0, rotation:360},"sametime")
+        .to("#front-3,#back-5",{duration:.6,skewX:45, skewY:45, transformOrigin:"center"},"-=.5")
+        .from("#thud-illustration-5", {alpha:0, duration:.2, scale:0},"-=.1")
+        .to("#thud-illustration-5", {duration:.3,autoAlpha:0})
 
     return tl;
     
@@ -48,20 +51,19 @@ function bootsrotatingwithsquishandthud(){
 
 function linesplitbetweenboots(){ //scaleX:100
     const tl =gsap.timeline();
-    tl.from("#leftline-1",{duration:1.2,drawSVG:0,ease:"none"})
-    .from("#rightline-1",{duration:1.2,drawSVG:0,ease:"none"})
+    tl.from("#leftline-1,#rightline-1",{duration:1,drawSVG:0,ease:"none"})
     .to("#leftline-1",{duration:1.5,x:"-=1000"},"sametime")
     .to("#rightline-1",{duration:1.5,x:"-=-1000"},"sametime")
     .to("#left-boot",{duration:1.5,x:"-=1000"},"sametime")
     .to("#right-boot",{duration:1.5,x:"-=-1000"},"sametime")
+    .from("#line-4",{duration:1.5,drawSVG:0},"-=1.5")
 
     return tl;
 }
 
 function drawwolf(){
     const tl =gsap.timeline();
-    tl.from("#line-4",{drawSVG:0})
-        .from("#vector-8",{drawSVG:0})
+        tl.from("#vector-8",{drawSVG:0})
         .from("#vector-56",{drawSVG:0},"-=0.5")
         .from("#vector-82",{drawSVG:0})
         .from("#vector-5",{drawSVG:0},"-=0.5")
@@ -83,7 +85,7 @@ function drawwolf(){
 
 function spikesrotating(){
     const tl =gsap.timeline();
-    tl.to("#spikes",{duration:2, scale:5, rotation:"360",transformOrigin:'center',ease: "myEase"})
+    tl.to("#spikes",{duration:1.5, scale:5, rotation:"360",transformOrigin:'center',ease: "myEase"})
 
     return tl;
 }
